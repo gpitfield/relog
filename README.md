@@ -1,5 +1,4 @@
-# relog [![GoDoc](https://godoc.org/github.com/gpitfield/relog?status.svg)](https://godoc.org/github.com/gpitfield/relog)
-[![GoCover](http://gocover.io/_badge/github.com/gpitfield/relog)](http://gocover.io/github.com/gpitfield/relog)
+# relog [![GoDoc](https://godoc.org/github.com/gpitfield/relog?status.svg)](https://godoc.org/github.com/gpitfield/relog)[![GoCover](http://gocover.io/_badge/github.com/gpitfield/relog)](http://gocover.io/github.com/gpitfield/relog)
 
 Relog provides prioritized log messages, as well as logging relays and collectors such that a
 single call to relog can log to multiple locations conditional on that message's priority.
