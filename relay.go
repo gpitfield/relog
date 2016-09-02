@@ -25,7 +25,7 @@ type Relay struct {
 // TODO: initialize this to point to sys.log
 var std Relay = Relay{
 	verbosity: LDebug,
-	calldepth: 2,
+	calldepth: 3,
 	receivers: []Receiver{NewCollector(os.Stderr, LDebug, "", log.Lshortfile|log.LstdFlags)},
 }
 
@@ -35,7 +35,7 @@ func New(verbosity int, prefix string, flag int) *Relay {
 		verbosity: verbosity,
 		prefix:    prefix,
 		flag:      flag,
-		calldepth: 1,
+		calldepth: 2,
 	}
 }
 

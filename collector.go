@@ -9,9 +9,6 @@ import (
 // Collector is a wrapper on the golang log package type Logger, with the addition
 // of a verbosity parameter to control what level of log messages should be sent to its Logger.
 // Collector implements the Receiver interface.
-// The Collector's logger's flag are derived as a bitwise OR of the Relay and Collector's flag values.
-// The Collector's logger's prefix is set when a Collector is registered with a Relay, and cannot
-// be changed.
 type Collector struct {
 	logger    *log.Logger
 	verbosity int
