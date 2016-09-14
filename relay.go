@@ -39,6 +39,17 @@ func New(verbosity int, prefix string, flag int) *Relay {
 	}
 }
 
+// New creates a new Relay with a collector to StdErr
+func NewStdLog(verbosity int, prefix string, flag int) *Relay {
+	return &Relay{
+		verbosity: verbosity,
+		prefix:    prefix,
+		flag:      flag,
+		calldepth: 2,
+		receivers: []Receiver{NewCollector(os.Stderr, verbosity, "", flag)},
+	}
+}
+
 // AddWriter creates a Collector and adds it to the Relay's receivers
 func (r *Relay) AddWriter(w io.Writer, verbosity int, prefix string, flag int) {
 	r.receivers = append(r.receivers, NewCollector(w, verbosity, prefix, flag))
