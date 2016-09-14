@@ -3,7 +3,6 @@ package relog
 import (
 	"fmt"
 	"io"
-	"log"
 	"os"
 )
 
@@ -26,7 +25,7 @@ type Relay struct {
 var std Relay = Relay{
 	verbosity: LDebug,
 	calldepth: 3,
-	receivers: []Receiver{NewCollector(os.Stderr, LDebug, "", log.Lshortfile|log.LstdFlags)},
+	receivers: []Receiver{NewCollector(os.Stderr, LDebug, "", Lshortfile|LstdFlags)},
 }
 
 // New creates a new Relay with no receivers.
